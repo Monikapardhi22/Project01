@@ -1,4 +1,5 @@
 import React,{useState} from 'react'
+import like from '../'
 
 export default function Navbar({  setSelectedView }) {
     const [menuOpen, setMenuOpen] = useState(false);
