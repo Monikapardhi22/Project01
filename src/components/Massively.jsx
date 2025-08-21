@@ -1,4 +1,11 @@
 import React,{useState,useEffect} from 'react'
+import pic1 from '../assets/pic01.jpg'
+import pic2 from '../assets/pic02.jpg'
+import pic3 from '../assets/pic03.jpg'
+import pic4 from '../assets/pic04.jpg'
+import pic5 from '../assets/pic05.jpg'
+// import bg from '../assets/bg.jpg'
+
 
 import './Massively.css'
 
@@ -32,9 +39,9 @@ export default function Massively({selectedView }) {
     }
   };
     return (
-        <div className={`mx-auto border p-6 ${getViewClass()} overflow-hidden`}>
+        <div className={`mx-auto border p-6 ${getViewClass()} overflow-hidden s="h-screen bg-[url('../assets/bg.jpg')] bg-cover bg-no-repeat bg-fixed text-white m-0 p-0`}>
 
-            <div className='header'>
+            <div className='header '>
 
 
 
@@ -81,7 +88,7 @@ export default function Massively({selectedView }) {
                 </div>
 
                 <a href='#' className='image main'>
-                    <img src='src/assets/pic01.jpg' alt='pic01' />
+                    <img src={pic1} alt='pic01' />
                 </a>
                 <ul>
                     <li>
@@ -103,7 +110,7 @@ export default function Massively({selectedView }) {
                     </h2>
 
                     <a href='#' className='image main'>
-                        <img src='src/assets/pic02.jpg' alt='pic02' />
+                        <img src={pic2} alt='pic02' />
                     </a>
                     <p className='para'>
                         Doneceget ex magna.Interdum et malesuada fames ac ante ipsun primis in faucibus .Pellentesque veneenatis dolor imperdiet dolor mattis sagittis magna etiam.
@@ -130,7 +137,7 @@ export default function Massively({selectedView }) {
                             IMPERDIET LOREM</a>
                     </h2>
                     <a href='#' className='image main'>
-                        <img src='src/assets/pic03.jpg' alt='pic03' />
+                        <img src={pic3} alt='pic03' />
                     </a>
                     <p className='para'>
                         Doneceget ex magna.Interdum et malesuada fames ac ante ipsun primis in faucibus .Pellentesque veneenatis dolor imperdiet dolor mattis sagittis magna etiam.
@@ -156,7 +163,7 @@ export default function Massively({selectedView }) {
                             INTERDUM DOLOR</a>
                     </h2>
                     <a href='#' className='image main'>
-                        <img src='src/assets/pic04.jpg' alt='pic04' />
+                        <img src={pic4} alt='pic04' />
                     </a>
                     <p className='para'>
                         Doneceget ex magna.Interdum et malesuada fames ac ante ipsun primis in faucibus .Pellentesque veneenatis dolor imperdiet dolor mattis sagittis magna etiam.
@@ -181,7 +188,7 @@ export default function Massively({selectedView }) {
                             NULLA IMPERDIET</a>
                     </h2>
                     <a href='#' className='image main'>
-                        <img src='src/assets/pic05.jpg' alt='pic05' />
+                        <img src={pic5} alt='pic05' />
                     </a>
                     <p className='para'>
                         Doneceget ex magna.Interdum et malesuada fames ac ante ipsun primis in faucibus .Pellentesque veneenatis dolor imperdiet dolor mattis sagittis magna etiam.
