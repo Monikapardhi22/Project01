@@ -1,0 +1,259 @@
+body {
+  background-image: url("src/assets/bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  /* background-position: center; */
+  color: aliceblue;
+  background-attachment: fixed;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+h1 {
+  font-weight: bolder;
+  font-style: normal;
+  font-size: 80px;
+  width: 400px;
+  height: 200px;
+  text-align: center;
+  line-height: 90px;
+  margin-left: 150px;
+  margin-right: 150px;
+  margin-top: 150px;
+}
+
+
+.scroll{
+    text-align: center;
+  margin-top: 120px;
+  transition: all 0.6s ease-in-out;
+  opacity: 1;
+  transform: translateY(0px);
+}
+
+.scroll.hide{
+    opacity: 0;
+    transform: translateX(-50px);
+}
+
+.italic {
+  font-size: 20px;
+
+  margin-left: 70px;
+  margin-right: 70px;
+}
+
+.massively-scroll{
+    font-weight: 700;
+    padding: 10px;
+   
+    width: 270px;
+    height: 80px;
+    border-radius: 3px;
+    overflow: hidden;
+    border: 5px solid white;
+    font-size: 30px;
+    text-align: center;
+    opacity: 0;
+   
+    transition: all 0.6s ease-in-out ;
+}
+.massively-scroll.show{
+    opacity: 1;
+   
+}
+
+.nav {
+  background-color: aliceblue;
+  margin: 60px;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#date {
+  font-weight: 300;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  font-style: italic;
+}
+
+#and {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 900;
+
+  font-size: 46px;
+  text-align: center;
+
+  letter-spacing: 2px;
+}
+
+#and:hover {
+  color: #18bfef;
+}
+
+.para {
+  text-align: center;
+  font-style: italic;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  font-weight: 400;
+}
+
+/* images css */
+
+.image .main img {
+  width: 500px;
+  height: 200px;
+  overflow: hidden;
+}
+
+a.image img {
+  transition: transform 0.2s ease-out;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+a.image img:hover {
+  transform: scale(1.1);
+  overflow: hidden;
+}
+.box{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around ;
+    align-items: center;
+    padding: 20px;
+    overflow: hidden;
+}
+.story-btn {
+  height: 90px;
+  width: 270px;
+  line-height: 3.75em;
+  font-weight: bold;
+  font-size: 30px;
+  border: 3px solid black;
+  padding: 20px;
+  margin-top: 19px;
+}
+
+.page-next {
+  display: flex;
+  flex-direction: row;
+
+  padding: 10px;
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.next::after {
+  content: ">";
+}
+
+.foot{
+      background-color: rgb(245, 245, 229);
+      width: 100%;
+
+}
+form {
+  background-color: rgb(245, 245, 229);
+  width: 100%;
+  /* margin: 10px; */
+}
+
+form div {
+  display: flex;
+  flex-direction: column;
+  margin-left: 30px;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+form label {
+  font-size: 29px;
+  color: rgb(121, 121, 109);
+  font-weight: 500;
+}
+form input {
+  border: 2px solid rgb(135, 135, 119);
+  width: 80%;
+  height: 50px;
+  border-radius: 3px;
+  font-size: 20px;
+}
+
+form textarea {
+  border: 2px solid rgb(135, 135, 119);
+  width: 80%;
+  border-radius: 3px;
+}
+
+form button {
+  padding: 10px;
+  font-size: 29px;
+  color: rgb(121, 121, 109);
+  font-weight: 500;
+  width: 290px;
+  border-radius: 3px;
+  border: 3px solid rgb(135, 135, 119);
+  margin-bottom: 30px;
+}
+
+
+.details{
+    background-color: rgb(245, 245, 229);
+  width: 100%;
+  
+
+}
+
+.details h3{
+    font-size: 19px;
+  color: rgb(121, 121, 109);
+  font-weight: bold;
+
+}
+.details ul{
+    padding: 20px;
+}
+
+.details  p{
+    font-weight: 200;
+    color: rgb(121, 121, 109);
+    font-size: 19px;
+
+}
+
+.details a{
+     font-weight: 200;
+    color: rgb(121, 121, 109);
+    font-size: 19px;
+}
+
+.details li{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+hr{
+    color: rgb(168, 168, 154);;
+}
+ 
