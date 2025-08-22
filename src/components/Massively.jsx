@@ -39,7 +39,7 @@ export default function Massively({selectedView }) {
     }
   };
     return (
-        <div className={`mx-auto border p-6 ${getViewClass()} overflow-hidden s="h-screen bg-[url('../assets/bg.jpg')] bg-cover bg-no-repeat bg-fixed text-white m-0 p-0`}>
+        <div className={`mx-auto border p-6 ${getViewClass()} overflow-hidden s="h-screen bg-[url('/src/assets/bg.jpg')] bg-cover bg-no-repeat bg-fixed text-white m-0 p-0`}>
 
             <div className='header '>
 
