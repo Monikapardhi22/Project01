@@ -1,5 +1,6 @@
 import React,{useState} from 'react'
-import like from '../'
+import like from '../assets/like button.webp'
+import xpost from '../assets/xpost.webp'
 
 export default function Navbar({  setSelectedView }) {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -64,10 +65,10 @@ export default function Navbar({  setSelectedView }) {
       <div className='flex font-bold text-white '>
         <ul className=' flex    gap-3 border border-gray-300 rounded-md p-1 mr-2.5'>
             <li>
-                <img src='src/assets/like button.webp' height='30px' width='30px' className='cursor-pointer'/>
+                <img src={like} height='30px' width='30px' className='cursor-pointer'/>
             </li>
             <li>
-                <img src='src/assets/xpost.webp' height='30px' width='30px' className='cursor-pointer'/>
+                <img src={xpost} height='30px' width='30px' className='cursor-pointer'/>
             </li>
         </ul>
         <div className='mt-2'>
