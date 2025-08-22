@@ -17,6 +17,10 @@ body {
   flex-direction: column;
 }
 
+button {
+  text-shadow: 0px 0px 2px white;
+}
+
 h1 {
   font-weight: bolder;
   font-style: normal;
@@ -30,18 +34,17 @@ h1 {
   margin-top: 150px;
 }
 
-
-.scroll{
-    text-align: center;
+.scroll {
+  text-align: center;
   margin-top: 120px;
   transition: all 0.6s ease-in-out;
   opacity: 1;
   transform: translateY(0px);
 }
 
-.scroll.hide{
-    opacity: 0;
-    transform: translateX(-50px);
+.scroll.hide {
+  opacity: 0;
+  transform: translateX(-50px);
 }
 
 .italic {
@@ -51,34 +54,78 @@ h1 {
   margin-right: 70px;
 }
 
-.massively-scroll{
-    font-weight: 700;
-    padding: 10px;
-   
-    width: 270px;
-    height: 80px;
-    border-radius: 3px;
-    overflow: hidden;
-    border: 5px solid white;
-    font-size: 30px;
-    text-align: center;
-    opacity: 0;
-   
-    transition: all 0.6s ease-in-out ;
+.massively-scroll {
+  font-weight: 700;
+  padding: 10px;
+
+  width: 270px;
+  height: 80px;
+  border-radius: 3px;
+  overflow: hidden;
+  border: 5px solid white;
+  font-size: 30px;
+  text-align: center;
+  opacity: 0;
+
+  transition: all 0.6s ease-in-out;
 }
-.massively-scroll.show{
-    opacity: 1;
-   
+.massively-scroll.show {
+  opacity: 1;
 }
 
 .nav {
-  background-color: aliceblue;
-  margin: 60px;
+  background-color: white;
+  margin-left: 10px;
+  margin-right: 10px;
+
   color: black;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+@media (max-width: 768px) {
+  .nav {
+    margin-top: 60px;
+  }
+}
+
+.page h4:hover {
+  color: #18bfef;
+  background-color: aliceblue;
+  /* width: px; */
+  height: 90px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.page h4 {
+  border: 2px solid aliceblue;
+  padding: 20px;
+  border: none;
+}
+.page {
+  display: flex;
+  font-size: 18px;
+  font-weight: bold;
+  width: px;
+  gap: 9px;
+  /* background-color: aliceblue; */
+  color: black;
+  margin-left: 60px;
+  margin-right: 60px;
+
+  height: 100px;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 23px;
+}
+
+@media (max-width: 768px) {
+  .page {
+    display: none;
+  }
 }
 
 #date {
@@ -135,13 +182,13 @@ a.image img:hover {
   transform: scale(1.1);
   overflow: hidden;
 }
-.box{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around ;
-    align-items: center;
-    padding: 20px;
-    overflow: hidden;
+.box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding: 20px;
+  overflow: hidden;
 }
 .story-btn {
   height: 90px;
@@ -157,23 +204,26 @@ a.image img:hover {
 .page-next {
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  align-items: center;
 
-  padding: 10px;
-  font-size: 30px;
+  padding: 6px;
+  font-size: 16px;
   font-weight: 700;
 }
 
 .next::after {
   content: ">";
+    padding: 6px;
+
 }
 
-.foot{
-      background-color: rgb(245, 245, 229);
-      width: 100%;
-
+.foot {
+  background-color: rgb(245, 246, 241);
+  width: 100%;
 }
 form {
-  background-color: rgb(245, 245, 229);
+  background-color: rgb(235, 235, 230);
   width: 100%;
   /* margin: 10px; */
 }
@@ -187,7 +237,7 @@ form div {
 }
 
 form label {
-  font-size: 29px;
+  font-size: 16px;
   color: rgb(121, 121, 109);
   font-weight: 500;
 }
@@ -196,7 +246,7 @@ form input {
   width: 80%;
   height: 50px;
   border-radius: 3px;
-  font-size: 20px;
+  font-size: 14px;
 }
 
 form textarea {
@@ -207,53 +257,48 @@ form textarea {
 
 form button {
   padding: 10px;
-  font-size: 29px;
+  font-size: 16px;
   color: rgb(121, 121, 109);
   font-weight: 500;
   width: 290px;
   border-radius: 3px;
   border: 3px solid rgb(135, 135, 119);
   margin-bottom: 30px;
+  margin-left: 1px;
 }
 
-
-.details{
-    background-color: rgb(245, 245, 229);
+.details {
+  background-color: rgb(245, 245, 229);
   width: 100%;
-  
-
 }
 
-.details h3{
-    font-size: 19px;
+.details h3 {
+  font-size: 16px;
   color: rgb(121, 121, 109);
   font-weight: bold;
-
 }
-.details ul{
-    padding: 20px;
-}
-
-.details  p{
-    font-weight: 200;
-    color: rgb(121, 121, 109);
-    font-size: 19px;
-
+.details ul {
+  padding: 20px;
 }
 
-.details a{
-     font-weight: 200;
-    color: rgb(121, 121, 109);
-    font-size: 19px;
+.details p {
+  font-weight: 200;
+  color: rgb(121, 121, 109);
+  font-size: 14px;
 }
 
-.details li{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+.details a {
+  font-weight: 200;
+  color: rgb(121, 121, 109);
+  font-size: 19px;
 }
 
-hr{
-    color: rgb(168, 168, 154);;
+.details li {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
- 
+
+hr {
+  color: rgb(168, 168, 154);
+}
