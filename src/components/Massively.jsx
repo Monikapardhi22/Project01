@@ -400,7 +400,7 @@ export default function Massively({ selectedView, setSelectedView }) {
 
                 
 
-                <MassivelyContent/>
+                {/* <MassivelyContent/> */}
 
                 {/* massievly */}
                 {selectedView === 'massively' && (
