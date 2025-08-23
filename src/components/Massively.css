@@ -4,10 +4,17 @@ body {
   background-repeat: no-repeat;
   margin: 0;
   padding: 0;
-  height: 100vh;
+  height: 70vh;
   /* background-position: center; */
   color: aliceblue;
   background-attachment: fixed;
+}
+.mass{
+  font-size: 69px;
+  /* text-shadow: 0 0 2px white; */
+  text-align: center;
+  font-weight: 900;
+  letter-spacing: 5px;
 }
 
 .header {
@@ -19,6 +26,21 @@ body {
 
 button {
   text-shadow: 0px 0px 2px white;
+}
+
+.free{
+  display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    /* unicode-bidi: isolate; */
+}
+.free a{
+text-decoration-line: underline; 
+  text-decoration-style: dotted;
+  text-decoration-thickness: 1px;
+
 }
 
 h1 {
@@ -90,15 +112,14 @@ h1 {
   }
 }
 
-.page h4:hover {
+/* .page h4:hover {
   color: #18bfef;
   background-color: aliceblue;
-  /* width: px; */
-  height: 90px;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-}
+  width: 260px; 
+  height: 100px;
+    padding: 20px;
+  
+} */
 
 .page h4 {
   border: 2px solid aliceblue;
@@ -113,7 +134,7 @@ h1 {
   gap: 9px;
   /* background-color: aliceblue; */
   color: black;
-  margin-left: 60px;
+  margin-left: 80px;
   margin-right: 60px;
 
   height: 100px;
@@ -130,13 +151,13 @@ h1 {
 
 #date {
   font-weight: 300;
-  font-size: 20px;
+  font-size: 17px;
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 40px;
   margin-bottom: 40px;
-  font-style: italic;
+  font-style:sans;
 }
 
 #and {
@@ -145,22 +166,41 @@ h1 {
   align-items: center;
   font-weight: 900;
 
-  font-size: 46px;
+  font-size: 22px;
   text-align: center;
+  letter-spacing: 3px;
 
-  letter-spacing: 2px;
+  /* letter-spacing: 2px; */
 }
 
 #and:hover {
   color: #18bfef;
 }
+#and-and{
+    display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 900;
+
+  font-size: 48px;
+  text-align: center;
+  letter-spacing: 3px;
+
+}
+#and-and:hover {
+  color: #18bfef;
+}
+
 
 .para {
-  text-align: center;
-  font-style: italic;
+  
   margin-top: 30px;
+  word-spacing: 3px;
   margin-bottom: 30px;
-  font-weight: 400;
+  font-weight: 200;
+  font-size: 20px;
+
+
 }
 
 /* images css */
@@ -174,7 +214,7 @@ h1 {
 a.image img {
   transition: transform 0.2s ease-out;
   object-fit: cover;
-  width: 100%;
+  width: 500px;
   height: 100%;
   overflow: hidden;
 }
@@ -301,4 +341,17 @@ form button {
 
 hr {
   color: rgb(168, 168, 154);
+}
+.massively-scroll {
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: all 0.4s ease-in-out;
+  pointer-events: none;
+visibility: hidden;
+}
+
+.massively-scroll.show {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
 }
