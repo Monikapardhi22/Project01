@@ -9,6 +9,8 @@ import pic5 from '../assets/pic05.jpg'
 
 import './Massively.css'
 import { Link } from 'react-router'
+import ElementsContent from './ElementsContent'
+import GenericContent from './GenericContent'
 
 
 
@@ -17,7 +19,7 @@ import { Link } from 'react-router'
 export default function Massively({ selectedView, setSelectedView }) {
     // const [hide, setHide] = useState(false);
     const [menuOpen, setMenuOpen] = useState(false);
- 
+
     // useEffect(() => {
     //     const handleScroll = () => {
     //         if (window.scrollY > 200) {
@@ -29,7 +31,7 @@ export default function Massively({ selectedView, setSelectedView }) {
     //     window.addEventListener("scroll", handleScroll);
     //     return () => window.removeEventListener("scroll", handleScroll);
     // }, []);
-    
+
 
     const getViewClass = () => {
         switch (selectedView) {
@@ -45,22 +47,22 @@ export default function Massively({ selectedView, setSelectedView }) {
                 return "w-full";
         }
     };
-    function MassivelyContent({ setSelectedView }){
-         const [hide, setHide] = useState(false);
-         useEffect(() => {
-        const handleScroll = () => {
-            if (window.scrollY > 200) {
-                setHide(true);
-            } else {
-                setHide(false);
-            }
-        };
-        window.addEventListener("scroll", handleScroll);
-        return () => window.removeEventListener("scroll", handleScroll);
-    }, []);
-    
-                    return(
-                         <>
+    function MassivelyContent({ setSelectedView }) {
+        const [hide, setHide] = useState(false);
+        useEffect(() => {
+            const handleScroll = () => {
+                if (window.scrollY > 200) {
+                    setHide(true);
+                } else {
+                    setHide(false);
+                }
+            };
+            window.addEventListener("scroll", handleScroll);
+            return () => window.removeEventListener("scroll", handleScroll);
+        }, []);
+
+        return (
+            <>
                 <div className='header '>
 
 
@@ -73,12 +75,12 @@ export default function Massively({ selectedView, setSelectedView }) {
                         <p className='text-[16px] px-4 md:px-6 lg:px-12'>
                             <i className='free font-sans text-[18px] md:text-[21px] leading-relaxed block md:max-w-[550px] lg:max-w-[700px] md:ml-6 lg:ml-12' >
                                 A free,fully responsive HTML5+CSS3 site template designed by <a href='https://twitter.com/ajlkn' >@ajlkn </a>
-                                 for <a href='https://html5up.net'>HTML5UP</a>  <br/> and released for free under the <a href='https://html5up.net/license'>Creative Commons license</a>
+                                for <a href='https://html5up.net'>HTML5UP</a>  <br /> and released for free under the <a href='https://html5up.net/license'>Creative Commons license</a>
                             </i>
                         </p>
                     </div>
-                    </div>
-                     <div className='header overflow-hidden '>
+                </div>
+                <div className='header overflow-hidden '>
                     <ul className={`massively-scroll ${hide ? "show" : ""}`} >
                         <li className='hover:text-[#18bfef] hover:border-[#18bfef] '>
                             <a href='#header'  >
@@ -86,26 +88,27 @@ export default function Massively({ selectedView, setSelectedView }) {
                             </a>
                         </li>
                     </ul>
-                    </div>
+                </div>
 
 
-                
-                
+
+
                 <div className='page flex flex-row md:flex-row items-center '>
                     <div className='   text-white font-bold  flex-row  flex '>
                         <h4 className="cursor-pointer" onClick={() => setSelectedView('massively')}>
-                           THIS IS MASSIVELY</h4>
-                       <h4 className="cursor-pointer" onClick={() => setSelectedView('generic')} >
-                            GENERIC PAGE</h4>
-                   <h4  className="cursor-pointer" onClick={() => setSelectedView('elements')}>
-                       ELEMENTS REFERENCE</h4>
+                            THIS IS MASSIVELY</h4>
+                        <h4 className="cursor-pointer" onClick={() => setSelectedView('generic')} >
+                            <a href='#generic' >GENERIC PAGE</a> </h4>
+                            <br/>
+                        <h4 className="cursor-pointer" onClick={() => setSelectedView('elements')}>
+                              <a href='#elements' >ELEMENTS REFERENCE</a></h4>
 
                     </div>
                     <a href='#' className='gap-3.5 flex flex-row text-white ml-56' >
                         <i class="fa-brands fa-twitter" onClick={() => setSelectedView('tweet')} ></i>
-                        <i class="fa-brands fa-facebook" onClick={()=>setSelectedView('face')}></i>
-                        <i class="fa-brands fa-instagram" onClick={()=>setSelectedView('insta')}></i>
-                        <i class="fa-brands fa-github" onClick={()=>setSelectedView('github')}></i>
+                        <i class="fa-brands fa-facebook" onClick={() => setSelectedView('face')}></i>
+                        <i class="fa-brands fa-instagram" onClick={() => setSelectedView('insta')}></i>
+                        <i class="fa-brands fa-github" onClick={() => setSelectedView('github')}></i>
                     </a>
                 </div>
 
@@ -121,7 +124,7 @@ export default function Massively({ selectedView, setSelectedView }) {
                         </h2>
                         <p className=' m-4 text-center text-[4px] italic font-extralight'>
                             Aenean ornare velit lacus varius enim ullamcorper proin aliquam
-                           
+
                             facilisis ante sed etiam magna interdum congue. Lorem ipsum dolor
                             amet nullam sed etiam veroeros.
                         </p>
@@ -231,7 +234,7 @@ export default function Massively({ selectedView, setSelectedView }) {
                                     NULLA IMPERDIET</a>
                             </h2>
                             <a href='#' className='image main'>
-                                <img src={pic5} alt='pic05' className="w-full h-auto object-cover"/>
+                                <img src={pic5} alt='pic05' className="w-full h-auto object-cover" />
                             </a>
                             <p className='para'>
                                 Doneceget ex magna.Interdum et malesuada fames ac ante ipsun primis in faucibus .Pellentesque veneenatis dolor imperdiet dolor mattis sagittis magna etiam.
@@ -372,13 +375,13 @@ export default function Massively({ selectedView, setSelectedView }) {
 
                     </ul>
                 </div>
-                </>
-                    )
-                }
-                
-                
+            </>
+        )
+    }
 
-    
+
+
+
     return (
         <div >
             <div className={`mx-auto border p-6 ${getViewClass()} overflow-x-auto h-screen bg-[url('/src/assets/bg.jpg')] bg-cover bg-no-repeat bg-fixed text-white m-0 p-0 min-h-screen overflow-y-auto `}>
@@ -396,27 +399,34 @@ export default function Massively({ selectedView, setSelectedView }) {
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16" />
                     </svg>MENU
                 </button>
-                
+
+
+
+
+                <MassivelyContent/>
+
+    <GenericContent />            
+                <section 
+     id='elements' className='h-screen '><ElementsContent/></section>
 
                 
-
-                {/* <MassivelyContent/> */}
 
                 {/* massievly */}
-                {selectedView === 'massively' && (
+                {/* {selectedView === 'massively' && (
                     <MassivelyContent />
-                   
-                )}
+
+                )} */}
 
                 {/* GENERIC  */}
-                 {selectedView === 'generic' && ( <GenericContent />
-                    )}
+                {selectedView === 'generic' && ( <section 
+     id='generic' className='h-screen '><GenericContent /></section>
+                )}
 
 
                 {/* ELEMENTS */}
                 {selectedView === 'elements' && (
                     <ElementsContent />
-                    
+
                 )}
 
 
@@ -436,7 +446,7 @@ export default function Massively({ selectedView, setSelectedView }) {
                         </button>
                         <a href="/" className="p-2 pt-14  pb-5 text-[13.5px] pl-6 hover:text-[#18bfef]" onClick={() => { setSelectedView('massively'); setMenuOpen(false); }}>THIS IS MASSIVELY</a>
                         <hr />
-                        <a href="/" className="p-2 pt-14 pb-5 text-[13.5px] pl-6  hover:text-[#18bfef]" onClick={() =>  { setSelectedView('generic'); setMenuOpen(false); }}><Link to='/generic'>GENERIC PAGE</Link></a>
+                        <a href="/" className="p-2 pt-14 pb-5 text-[13.5px] pl-6  hover:text-[#18bfef]" onClick={() => { setSelectedView('generic'); setMenuOpen(false); }}><Link to='/generic'>GENERIC PAGE</Link></a>
                         <hr />
                         <a href="/" className="p-2 pt-14 pb-5 text-[13.5px] pl-6  hover:text-[#18bfef] " onClick={() => setSelectedView('elements')}><Link to='/elements'>ELEMENTS REFERENCE</Link></a>
                         <hr />

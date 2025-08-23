@@ -17,7 +17,7 @@ export default function ElementsContent() {
   return (
     <div>
       
-                      <div className='header '>
+                      <div className='header  '>
       
       
       
